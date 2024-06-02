@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Patient</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Patient</h1>
+        <form method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ data.name }}"><br>
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" value="{{ data.age }}"><br>
+            <label for="sex">Sex:</label>
+            <input type="text" id="sex" name="sex" value="{{ data.sex }}"><br>
+            <label for="id_card">ID Card Number:</label>
+            <input type="text" id="id_card" name="id_card" value="{{ data.id_card }}"><br>
+            <label for="birthdate">Birthdate (YYYY-MM-DD):</label>
+            <input type="text" id="birthdate" name="birthdate" value="{{ data.birthdate }}"><br>
+            <label for="diagnosis">Diagnosis:</label>
+            <input type="text" id="diagnosis" name="diagnosis" value="{{ data.diagnosis }}"><br>
+            <label for="doctor">Doctor's Name:</label>
+            <input type="text" id="doctor" name="doctor" value="{{ data.doctor }}"><br>
+            <label for="issued_date">Issued Date (YYYY-MM-DD):</label>
+            <input type="text" id="issued_date" name="issued_date" value="{{ data.issued_date }}"><br>
+            <input type="submit" value="Add Patient">
+        </form>
+    </div>
+</body>
+</html>
